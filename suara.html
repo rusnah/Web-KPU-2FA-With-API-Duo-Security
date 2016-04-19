@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>.:KPU Ikamaru Jakarta dan Sekitarnya:.</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header" >
+					<h1><a href="index.html">Pendaftaran Ikamaru Jakarta dan Sekitarnya</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="profile.html">Profil KPU</a></li>
+							<li><a href="#" class="icon fa-angle-down">Para Calon Ketum</a>
+								<ul>
+									<li><a href="calon1.html">Calon Ke-Satu</a></li>
+									<li><a href="calon2.html">Calon Ke-Dua</a></li>
+									<li><a href="calon3.html">Calon Ke-Tiga</a></li>
+								</ul>
+							</li>
+							<li><a href="contact.html">Contact Us</a></li>
+							<li><a href="kpu/" class="button">Sign In For Vote</a></li>
+						</ul>
+					</nav>
+				</header>
+
+				<!-- Main -->
+				<div class="row">
+						<div class="12u">
+				<section class="box">
+					<header>
+						<h2 align="center">Hasil Suara Masuk Sementara</h2>
+						<p align="center">Hasil Sementara Quick Count.</p>
+					</header>
+					
+						<div class="table-wrapper">
+							<table>
+								<thead>
+									<tr>
+										<th>No. Urut Calon</th>
+										<th>Nama Calon Ketum</th>   
+										<th>Suara Masuk</th>
+									  </tr>
+								</thead>
+									<tbody>
+									 <?php
+										include("kpu/config/koneksi.php");	
+										//untuk mencari jumlah
+										echo "<h4 /><b>Jumlah Anggota Ikamaru : ".$jumlah_user=mysql_num_rows(mysql_query("select * from user_login where login_hash='anggota'"));
+										echo " >> Jumlah Anggota Yang Memilih : ".$jumlah_milih=mysql_num_rows(mysql_query("select * from user_login,calon where user_login.vote=calon.kd_calon and login_hash='anggota' "));
+										echo "<br><br>";
+											
+									  $rw=mysql_query("Select * from calon order by kd_calon ");
+									  while($s=mysql_fetch_array($rw))
+									  {
+									  ?>
+									  <tr>
+										<td align="center"><?php echo $c=$c+1; ?></td>
+										<td align="center"><?php echo $s['nama_ketum']; ?></td>	
+										<td align="center">
+										<?php 
+											//$v=$row['vote'];
+											if ($s['kd_user'] == 'zaim')
+											{	
+												echo "<b>".$plh1=mysql_num_rows(mysql_query("select * from user_login,calon where user_login.vote=calon.kd_calon and user_login.vote='1' and user_login.login_hash='anggota' "));
+											}
+											else if ($s['kd_user'] == 'luki')
+											{	
+												echo "<b>".$plh2=mysql_num_rows(mysql_query("select * from user_login,calon where user_login.vote=calon.kd_calon and user_login.vote='2' and user_login.login_hash='anggota' "));
+											}
+											else if ($s['kd_user'] == 'riyadi')
+											{	
+												echo "<b> ".$plh3=mysql_num_rows(mysql_query("select * from user_login,calon where user_login.vote=calon.kd_calon and user_login.vote='3' and user_login.login_hash='anggota' "));
+											}
+											
+										?> Orang
+									   </td>
+									   </tbody>
+									   </tr>
+									   
+									</tbody>
+									  <?php
+									  }
+									  ?>
+									</table>
+									</div>
+					<div class="box">
+					</div>
+				</section>
+
+			
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<<li><a href="https://twitter.com/kpu.ikamarujakarta" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://facebook.com/kpu.ikamarujakarta" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://instagram.com/kpu.ikamarujakarta" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://dribble.com/kpu.ikamarujakarta" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="https://gmail.com" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Copyright <a href="http://pstik.uai.ac.id">pstik.uai.ac.id</a></li><li>Design By: <a href="https://github.tristiyadi.com">Eko Tristiyadi</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<html>
+	<head>
+		<title>.:KPU Ikamaru Jakarta dan Sekitarnya:.</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!-- JavaScript -->
+		<script type="text/javascript" src=""></script>
+		<script src="course/js/jquery-ui.js"></script>
+		<script>
+		$(function() {
+		$("#datepicker1").datepicker({        
+				 dateFormat: "yy-mm-dd",
+			});
+		});
+
+		</script>
+		<style type="text/css">
+		
+		</style>
+	</head>
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header" >
+					<h1><a href="index.html">Pendaftaran Ikamaru Jakarta dan Sekitarnya</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="profile.html">Profil KPU</a></li>
+							<li><a href="#" class="icon fa-angle-down">Para Calon Ketum</a>
+								<ul>
+									<li><a href="calon1.html">Calon Ke-Satu</a></li>
+									<li><a href="calon2.html">Calon Ke-Dua</a></li>
+									<li><a href="calon3.html">Calon Ke-Tiga</a></li>
+								</ul>
+							</li>
+							<li><a href="contact.html">Contact Us</a></li>
+							<li><a href="kpu/" class="button">Sign In For Vote</a></li>
+						</ul>
+					</nav>
+				</header>
+
+
+			<!-- Main -->
+			<section id="main" class="container 75%">
+					<header>
+						<h2>Form Pendaftaran Anggota KPU Ikamaru Jakarta dan Sekitarnya</h2>						
+					</header>
+					<div class="box">
+					<h3><b>Silahkan isi form dibawah ini.</h3> 
+					<table class="alt"> 
+					<form name="form" enctype="multipart/form-data" method="post" action="sukses.php" onsubmit="">
+	<div class="row uniform 50%">
+		<div class="12u">
+			<tr>
+				<td>Username</td>
+				<td><input type="text" name="username" id="username" value="" size=10 maxlength="10" required="required" placeholder="NIM. Contoh : 0102512006" /></td>
+			</tr>
+		</div>
+	<div class="12u">
+		<tr>
+			<td>Password</td>
+			<td><input type="password" name="password" id="password" value="" maxlength="30"required="required" placeholder="Password" /></td>
+		</tr>
+	</div>
+	<div class="12u">
+		<tr>
+			<td>Nama Lengkap</td>
+			<td><input type="text" name="nama_lengkap" id="nama_lengkap" value="" maxlength="50" required="required" placeholder="Nama Lengkap" /></td>
+		</tr>
+	</div>
+	<div class="12u">
+		<tr>
+			<td>Email </td>
+			<td><input type="email" name="email" id="email" value="" maxlength="30" required="required" placeholder="Email" /></td>
+		</tr>
+	</div>	
+	<div class="12u">
+		<tr>
+			<td>Tanggal Lahir </td>
+			<td><input type="text" name="tgl_lahir" id="datepicker1" value="" required="required" placeholder="Tanggal Lahir. Contoh : 1992-04-21" /></td>
+		</tr>
+	</div>
+	<div class="12u">
+		<tr>
+			<td>Alamat </td>
+			<td><textarea name="alamat" id="alamat" value="" required="required" placeholder="Input Alamat Anda"></textarea></td>
+		</tr>
+	</div>
+	<div class="12u">
+		<tr>
+			<td>Nomer Handphone </td>
+			<td><input type="text" name="no_hp" id="no_hp" value="" maxlength="14" required="required" placeholder="Contoh : 0857-1719-2636" /></td>
+		</tr>
+	</div>
+	<div class="12u">
+		<tr>
+			<td>Alumni Angkatan </td>
+			<td><input type="text" name="angkatan" id="angkatan" value="" maxlength="4" required="required" placeholder="Contoh : 2012" /></td>
+		</tr>
+	</div>
+	<div class="6u 12u(narrower)">
+		<tr>
+			<td>Aktivitas Sekarang</td>
+			<td><select name="status" id="status" value=".:Pilih Status Anda:." required="required">
+				<option value="Kuliah">Kuliah </option>
+				<option value="Kerja">Kerja </option>
+			</select></td>
+		</tr>
+	</div>
+	<div class="6u 12u(narrower)">
+		<tr>
+			<td>Input Captcha</td><td><img src='captcha.php'></td></tr>
+			<tr><td></td><td>(masukkan 6 kode di atas)<br /><input type=text name=capctha size=6 maxlength=6 required="required"><br /></td></tr>
+	</div>
+	<div class="6u 12u(narrower)">
+		<tr>
+			<td> Verifikasi Human </td>
+			<td><input type="checkbox" id="human" name="login_hash" required="required" >
+			<label for="human">I am not a robot</label></td>
+		</tr>
+	</div>
+	<div class="12u"><tr><td></td>
+		<ul class="actions align-center">
+			<li><td><input class="button special" type="submit" name="daftar" value="Daftar" /></td></li>
+		</ul></tr>
+	</div>
+	</div>
+</form> 
+					
+					</table>
+					</div>
+				</section>					
+
+			
+				<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<<li><a href="https://twitter.com/kpu.ikamarujakarta" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://facebook.com/kpu.ikamarujakarta" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://instagram.com/kpu.ikamarujakarta" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://dribble.com/kpu.ikamarujakarta" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="https://gmail.com" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Copyright <a href="http://pstik.uai.ac.id">pstik.uai.ac.id</a></li><li>Design By: <a href="https://github.tristiyadi.com">Eko Tristiyadi</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
