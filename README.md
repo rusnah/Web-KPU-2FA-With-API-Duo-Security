@@ -1,4 +1,6 @@
-<<<<<<< HEAD
+#TUGAS KOMSEK NIH, AMA BANG MARION ROTINSULU
+
+
 # Overview
 
 **duo_php** - Duo two-factor authentication for PHP web applications
